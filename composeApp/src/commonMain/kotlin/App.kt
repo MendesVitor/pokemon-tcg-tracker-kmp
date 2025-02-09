@@ -9,8 +9,7 @@ import androidx.navigation.compose.rememberNavController
 import navigation.NavGraph
 import navigation.NavigationManager
 import org.jetbrains.compose.ui.tooling.preview.Preview
-import ui.components.AppBar
-import ui.theme.AppTheme
+import presentation.ui.components.AppBar
 
 @Composable
 @Preview

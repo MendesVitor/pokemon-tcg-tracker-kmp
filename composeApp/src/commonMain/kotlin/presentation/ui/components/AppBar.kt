@@ -1,4 +1,4 @@
-package ui.components
+package presentation.ui.components
 
 
 import androidx.compose.material.icons.Icons
