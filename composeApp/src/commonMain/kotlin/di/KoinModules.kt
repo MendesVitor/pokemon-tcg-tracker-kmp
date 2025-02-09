@@ -10,7 +10,7 @@ import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.KoinAppDeclaration
 import org.koin.dsl.bind
 import org.koin.dsl.module
-import presentation.ui.viewmodel.SetsViewModel
+import presentation.viewModel.SetsViewModel
 
 expect fun platformModule(): Module
 

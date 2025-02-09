@@ -12,7 +12,7 @@ import androidx.compose.runtime.getValue
 import navigation.NavigationManager
 import org.koin.compose.viewmodel.koinViewModel
 import org.koin.core.annotation.KoinExperimentalAPI
-import presentation.ui.viewmodel.SetsViewModel
+import presentation.viewModel.SetsViewModel
 
 @OptIn(KoinExperimentalAPI::class)
 @Composable
