@@ -3,11 +3,15 @@ package navigation
 import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.core.tween
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavHostController
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import org.example.poketcg.presentation.ui.screens.HomeScreen
 import org.example.poketcg.presentation.ui.screens.SetDetailScreen
+import presentation.ui.page.CollectionScreen
+import presentation.ui.page.HomeScreen
+import presentation.ui.page.SearchScreen
+import presentation.ui.page.SetScreen
 
 
 @Composable
@@ -49,6 +53,21 @@ fun NavGraph() {
             route = Screen.SetDetail.route
         ) { backStackEntry ->
             SetDetailScreen(setId = backStackEntry.arguments?.getString("setId") ?: "")
+        }
+        composable(
+            route = Screen.Sets.route,
+        ) {
+            SetScreen()
+        }
+        composable(
+            route = Screen.Search.route,
+        ) {
+            SearchScreen()
+        }
+        composable(
+            route = Screen.Collection.route,
+        ) {
+            CollectionScreen()
         }
     }
 }
