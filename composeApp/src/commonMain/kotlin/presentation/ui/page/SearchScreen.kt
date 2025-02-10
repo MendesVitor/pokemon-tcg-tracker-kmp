@@ -16,22 +16,11 @@ import presentation.viewModel.SetsViewModel
 
 @OptIn(KoinExperimentalAPI::class)
 @Composable
-fun HomeScreen() {
+fun SearchScreen() {
     val viewModel = koinViewModel<SetsViewModel>()
     val sets by viewModel.sets.collectAsState()
 
     Column {
-        Text("Sets")
-        LazyColumn {
-            items(sets) { set ->
-                Card {
-                    Button(onClick = {
-                        NavigationManager.navigateToSetDetail(set.id.toString())
-                    }) {
-                        Text(set.name)
-                    }
-                }
-            }
-        }
+        Text("Search")
     }
 }

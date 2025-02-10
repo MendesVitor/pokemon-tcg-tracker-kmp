@@ -10,6 +10,7 @@ import navigation.NavGraph
 import navigation.NavigationManager
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import presentation.ui.components.AppBar
+import presentation.ui.components.BottomBar
 
 @Composable
 @Preview
@@ -25,6 +26,9 @@ fun App(navController: NavHostController = rememberNavController()) {
                 Box(Modifier.padding(innerPadding)){
                     NavGraph()
                 }
+            },
+            bottomBar = {
+                BottomBar()
             }
         )
     }

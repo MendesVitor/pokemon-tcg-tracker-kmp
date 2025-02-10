@@ -10,7 +10,13 @@ object NavigationManager {
     }
 
     fun navigate(route: String) {
-        navController.navigate(route)
+        val startDestination = navController.graph.startDestinationRoute ?: return
+
+        navController.navigate(route) {
+            popUpTo(startDestination) { inclusive = true }
+            launchSingleTop = true
+            restoreState = false
+        }
     }
 
     fun navigateUp() {
