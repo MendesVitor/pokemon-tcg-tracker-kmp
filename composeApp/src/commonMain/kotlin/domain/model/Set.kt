@@ -8,5 +8,6 @@ data class Set(
     @PrimaryKey(autoGenerate = true) val id: Int,
     val name: String,
     val releaseDate: String,
+    val category: String
     //val cards: List<Card>
 )

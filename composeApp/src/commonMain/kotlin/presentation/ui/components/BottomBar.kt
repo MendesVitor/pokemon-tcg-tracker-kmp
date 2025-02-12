@@ -47,9 +47,7 @@ fun BottomBar() {
         )
     }
 
-    var selectedItem by remember {
-        mutableStateOf(items.first())
-    }
+    var selectedItem by remember { mutableStateOf<NavItem?>(null) }
 
     BottomAppBar(
         modifier = Modifier

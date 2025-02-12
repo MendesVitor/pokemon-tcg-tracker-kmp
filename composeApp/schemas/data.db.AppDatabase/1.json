@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "0a4ea90b83d7859a2bdd4409207bf3f8",
+    "identityHash": "01832076fb0bbf5d72d6610cdc380910",
     "entities": [
       {
         "tableName": "sets",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `releaseDate` TEXT NOT NULL)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `releaseDate` TEXT NOT NULL, `category` TEXT NOT NULL)",
         "fields": [
           {
             "fieldPath": "id",
@@ -25,6 +25,12 @@
             "columnName": "releaseDate",
             "affinity": "TEXT",
             "notNull": true
+          },
+          {
+            "fieldPath": "category",
+            "columnName": "category",
+            "affinity": "TEXT",
+            "notNull": true
           }
         ],
         "primaryKey": {
@@ -37,7 +43,7 @@
     ],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '0a4ea90b83d7859a2bdd4409207bf3f8')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '01832076fb0bbf5d72d6610cdc380910')"
     ]
   }
 }

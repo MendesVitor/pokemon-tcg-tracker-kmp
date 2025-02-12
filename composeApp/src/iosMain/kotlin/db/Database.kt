@@ -25,9 +25,16 @@ fun getDatabaseBuilder(): AppDatabase {
         .addCallback(object : RoomDatabase.Callback() {
             override fun onCreate(connection: SQLiteConnection) {
                 super.onCreate(connection)
-                connection.execSQL("INSERT INTO sets (id, name, releaseDate) VALUES (1, 'Base Set', '1999-01-09')")
-                connection.execSQL("INSERT INTO sets (id, name, releaseDate) VALUES (2, 'Jungle', '1999-06-16')")
-                connection.execSQL("INSERT INTO sets (id, name, releaseDate) VALUES (3, 'O impossivel aconteceu', '1999-06-16')")
+                connection.execSQL("INSERT INTO sets (id, name, releaseDate, category) VALUES (1, 'Base Set', '1999-01-09', 'Base')")
+                connection.execSQL("INSERT INTO sets (id, name, releaseDate, category) VALUES (2, 'Jungle', '1999-06-16', 'Base')")
+                connection.execSQL("INSERT INTO sets (id, name, releaseDate, category) VALUES (3, 'Mascaras', '2024-01-09', 'Scarlet&Violet')")
+                connection.execSQL("INSERT INTO sets (id, name, releaseDate, category) VALUES (4, 'Prismatic', '2025-06-16', 'Scarlet&Violet')")
+                connection.execSQL("INSERT INTO sets (id, name, releaseDate, category) VALUES (5, 'Teste', '2000-06-16', 'Base')")
+                connection.execSQL("INSERT INTO sets (id, name, releaseDate, category) VALUES (6, 'Outro Test', '2024-06-09', 'Scarlet&Violet')")
+                connection.execSQL("INSERT INTO sets (id, name, releaseDate, category) VALUES (7, 'Teste', '2000-06-16', 'Espada e Escudo')")
+                connection.execSQL("INSERT INTO sets (id, name, releaseDate, category) VALUES (8, 'Outro Test', '2024-06-09', 'Espada e Escudo')")
+                connection.execSQL("INSERT INTO sets (id, name, releaseDate, category) VALUES (9, 'Teste', '2000-06-16', 'B & W')")
+                connection.execSQL("INSERT INTO sets (id, name, releaseDate, category) VALUES (10, 'Outro Test', '2024-06-09', 'XY')")
             }
         })
         .build()
