@@ -1,8 +1,8 @@
 [versions]
-agp = "8.2.0"
-android-compileSdk = "34"
-android-minSdk = "24"
-android-targetSdk = "34"
+agp = "8.8.2"
+android-compileSdk = "35"
+android-minSdk = "28"
+android-targetSdk = "35"
 androidx-activityCompose = "1.9.0"
 androidx-appcompat = "1.6.1"
 androidx-constraintlayout = "2.1.4"
@@ -12,12 +12,13 @@ androidx-material = "1.12.0"
 androidx-test-junit = "1.1.5"
 compose-plugin = "1.6.10"
 junit = "4.13.2"
-kotlin = "2.0.20-Beta1"
+kamelImage = "1.0.3"
+kotlin = "2.1.0"
 material3Android = "1.2.1"
 kottie = "1.9.6-alpha02"
 materialIconsExtended = "1.7.7"
 roomCommon = "2.7.0-alpha01"
-ksp = "2.0.20-Beta1-1.0.22"
+ksp = "2.1.10-1.0.29"
 kotlinx-datetime = "0.6.0"
 sqlite = "2.5.0-SNAPSHOT"
 koin = "3.6.0-Beta4"
@@ -26,6 +27,7 @@ navigation = "2.7.0-alpha07"
 lifecycleViewModel = "2.8.3"
 
 [libraries]
+kamel-image-default = { module = "media.kamel:kamel-image-default", version.ref = "kamelImage" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }

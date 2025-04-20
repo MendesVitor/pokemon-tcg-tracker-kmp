@@ -1,10 +1,69 @@
-package org.example.poketcg.presentation.ui.screens
+package presentation.ui.page
 
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import domain.model.Card
+import presentation.ui.components.CardGrid
 
 @Composable
 fun SetDetailScreen(setId: String) {
-    // Aqui você pode carregar mais informações com base no `setId` (exemplo: consultar o ViewModel)
-    Text("Detalhes do Set: $setId")
+    val test = listOf<Card>(
+        Card(
+            id = 1,
+            name = "Pikachu",
+            number = "1",
+            imageUrl = "https://dz3we2x72f7ol.cloudfront.net/expansions/surging-sparks/pt-br/SV08_PTBR_238-2x.png",
+            typeId = "1",
+            artistId = "1",
+            setId = "1",
+            rarityId = "1"
+        ), Card(
+            id = 1,
+            name = "Pikachu",
+            number = "1",
+            imageUrl = "https://dz3we2x72f7ol.cloudfront.net/expansions/surging-sparks/pt-br/SV08_PTBR_238-2x.png",
+            typeId = "1",
+            artistId = "1",
+            setId = "1",
+            rarityId = "1"
+        ), Card(
+            id = 1,
+            name = "Pikachu",
+            number = "1",
+            imageUrl = "https://dz3we2x72f7ol.cloudfront.net/expansions/surging-sparks/pt-br/SV08_PTBR_238-2x.png",
+            typeId = "1",
+            artistId = "1",
+            setId = "1",
+            rarityId = "1"
+        ), Card(
+            id = 1,
+            name = "Pikachu",
+            number = "1",
+            imageUrl = "https://dz3we2x72f7ol.cloudfront.net/expansions/surging-sparks/pt-br/SV08_PTBR_238-2x.png",
+            typeId = "1",
+            artistId = "1",
+            setId = "1",
+            rarityId = "1"
+        ), Card(
+            id = 1,
+            name = "Pikachu",
+            number = "1",
+            imageUrl = "https://dz3we2x72f7ol.cloudfront.net/expansions/surging-sparks/pt-br/SV08_PTBR_238-2x.png",
+            typeId = "1",
+            artistId = "1",
+            setId = "1",
+            rarityId = "1"
+        ), Card(
+            id = 1,
+            name = "Pikachu",
+            number = "1",
+            imageUrl = "https://dz3we2x72f7ol.cloudfront.net/expansions/surging-sparks/pt-br/SV08_PTBR_238-2x.png",
+            typeId = "1",
+            artistId = "1",
+            setId = "1",
+            rarityId = "1"
+        )
+    )
+
+    CardGrid(test)
+
 }

@@ -26,4 +26,8 @@ object NavigationManager {
     fun navigateToSetDetail(setId: String) {
         navController.navigate("setDetail/$setId")
     }
+
+    fun navigateToHome() {
+        navController.navigate("home")
+    }
 }

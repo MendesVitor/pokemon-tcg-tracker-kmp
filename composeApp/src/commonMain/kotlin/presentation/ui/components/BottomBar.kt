@@ -9,11 +9,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import navigation.NavigationManager
 import navigation.Screen
@@ -26,41 +21,36 @@ data class NavItem(
 )
 
 @Composable
-fun BottomBar() {
-    val items = remember {
-        listOf(
-            NavItem(
-                icon = Icons.AutoMirrored.Filled.List,
-                label = "Coleções",
-                onClick = {NavigationManager.navigate(Screen.Sets.route)}
-            ),
-            NavItem(
-                icon = Icons.Default.Search,
-                label = "Buscar",
-                onClick = {NavigationManager.navigate(Screen.Search.route)}
-            ),
-            NavItem(
-                icon = Icons.Default.LocationOn,
-                label = "Álbuns",
-                onClick = {NavigationManager.navigate(Screen.Collection.route)}
-            ),
-        )
-    }
+fun BottomBar(
+    selectedItem: NavItem?,
+    onItemSelected: (NavItem) -> Unit
+) {
+    val items = listOf(
+        NavItem(
+            icon = Icons.AutoMirrored.Filled.List,
+            label = "Coleções",
+            onClick = { NavigationManager.navigate(Screen.Sets.route) }
+        ),
+        NavItem(
+            icon = Icons.Default.Search,
+            label = "Buscar",
+            onClick = { NavigationManager.navigate(Screen.Search.route) }
+        ),
+        NavItem(
+            icon = Icons.Default.LocationOn,
+            label = "Álbuns",
+            onClick = { NavigationManager.navigate(Screen.Collection.route) }
+        ),
+    )
 
-    var selectedItem by remember { mutableStateOf<NavItem?>(null) }
-
-    BottomAppBar(
-        modifier = Modifier
-    ) {
+    BottomAppBar {
         items.forEach { navItem ->
             NavigationBarItem(
                 selected = navItem == selectedItem,
                 label = { Text(navItem.label) },
-                icon = {
-                    Icon(navItem.icon, contentDescription = null)
-                },
+                icon = { Icon(navItem.icon, contentDescription = null) },
                 onClick = {
-                    selectedItem = navItem
+                    onItemSelected(navItem)
                     navItem.onClick()
                 },
             )

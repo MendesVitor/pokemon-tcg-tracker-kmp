@@ -3,11 +3,9 @@ package navigation
 import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.core.tween
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import org.example.poketcg.presentation.ui.screens.SetDetailScreen
+import presentation.ui.page.SetDetailScreen
 import presentation.ui.page.CollectionScreen
 import presentation.ui.page.HomeScreen
 import presentation.ui.page.SearchScreen

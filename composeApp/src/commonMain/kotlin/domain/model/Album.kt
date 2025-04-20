@@ -1,4 +1,4 @@
-package org.example.poketcg.domain.model
+package domain.model
 
 data class Album(
     val id: String,
